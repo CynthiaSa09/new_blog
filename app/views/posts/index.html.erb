@@ -1,23 +1,30 @@
-<h1>Lista de articulos</h1>
-
-<table class="table">
-  <tr>
-    <th> Titulo </th>
-    <th> Fecha de ingreso </th>
-    <th> Imagen </th>
-    <th> Contenido </th>
-  </th>
+<h1 class="text-center">Articulos varios</h1>
   
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.created_at %></td>
-      <td><img src='<%= post.image_url %>'></td>
-      <td><%= post.content %></td>
-    </tr>
+<div class="card-deck">
+<% @posts.each do |post| %>
+  <div class="card">
+    <img src="<%= post.image_url%>", width='100', height='200' class="card-img-top" alt="<%= post.title%>">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title%></h5>
+      <p class="card-text"><%= post.content %></p>
+      <p class="card-text"><small class="text-muted"><%= post.created_at%></small></p>
+    </div>
+  </div>
   <% end %>
-  <li><%= link_to "Go to dashboard", posts_dashboard_path%></li>
-</table>
+</div>
 
 
-     
+
+
+
+				
+				
+				
+
+				
+				
+				
+				
+
+			
+			

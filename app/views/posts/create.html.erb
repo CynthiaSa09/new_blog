@@ -1,0 +1,15 @@
+<h1>Posts#create</h1>
+<% if @post.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@post.errors.count, "error") %> Prohibido el uso de esta información:</h2>
+<ul>
+<% @post.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+  </div>
+  <% else %>
+  <h1> Tu registro ha sido un exito </h1>
+  <li><%= link_to "Volver al inicio", posts_index_path%></li>
+  <li><%= link_to "Volver al Dashboard", posts_dashboard_path%></li>
+  <% end %>

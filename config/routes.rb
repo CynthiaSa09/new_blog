@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'posts/create'
   get 'posts/dashboard'
 
-  root 'posts#index'
+  root to: 'posts#index'
 
 end
